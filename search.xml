@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>VSCode实用插件</title>
+    <url>/2023/07/08/VSCode%E5%AE%9E%E7%94%A8%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="Turbo-Console-Log"><a href="#Turbo-Console-Log" class="headerlink" title="Turbo Console Log"></a>Turbo Console Log</h2><p>前端开发必备的打印神器，众所周知前端开发的时候会大量使用 “console.log()” 方法，每次都手敲会十分不便。而这个插件为我们解决了这个难题。<br><img src="https://my-pic-base.oss-cn-beijing.aliyuncs.com/blog/vscodeplugin/howtouseconsolelog.png" alt="Alt text"><br>选中你要打印的变量（上图使用num这个变量）</p>
+<ul>
+<li>快捷打印变量：control + option + L</li>
+<li>注释所有的打印：option + shift + C</li>
+<li>取消注释所有的打印：option + shift + U</li>
+<li>删除所有的打印语句：option + shift + D</li>
+</ul>
+<p>因为我用的是Mac所以以上快捷键都是Mac系统的</p>
+<h2 id="carbon-now-sh"><a href="#carbon-now-sh" class="headerlink" title="carbon-now-sh"></a>carbon-now-sh</h2><p>这是一个提升逼格的插件，我们在开发的时候难免会遇到一些代码上的问题需要请教领导或同事，如果我们直接复制一大段代码给他们，难免有点不雅，并且有些代码会乱码，所以我们需要这个插件，将代码生成一张图片，使用方法也很简单。</p>
+<ol>
+<li>选中你要生成图片的代码</li>
+<li>打开命令行托盘：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Window - Ctrl + Shift + P</span><br><span class="line">- Mac - Cmd + Shift + P</span><br></pre></td></tr></table></figure></li>
+<li>输入 “Carbon”，点击它<br>完成上述步骤之后，会跳转到一个网页，你可以设置图片的颜色以及代码的格式，如下图所示:<br><img src="https://my-pic-base.oss-cn-beijing.aliyuncs.com/blog/vscodeplugin/Snipaste_2023-07-08_10-06-41.png" alt="Alt text"><br>进行一些简单的设置你想要的风格和样式，就可以下载和复制图片啦</li>
+</ol>
+<h2 id="Vetur"><a href="#Vetur" class="headerlink" title="Vetur"></a>Vetur</h2><p>Vetur 是为 Vue 开发量身打造的插件，当你新建一个空的 Vue 文件，在文件内输入 vue 关键字，能联想一些 vue 文件的快速模板，帮助你快速生成 vue 模板页面，大大提高了开发效率。</p>
+<h2 id="open-in-browser"><a href="#open-in-browser" class="headerlink" title="open-in-browser"></a>open-in-browser</h2><p>写好页面，打开浏览器是很正常的一步操作，但是就是这么正常的操作，有时候会变得很麻烦。VS Code 没有自带打开默认浏览器的功能，所以我们需要这个插件去弥补这个遗憾。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>JavaScript闭包函数</title>
     <url>/2023/07/07/JavaScript%E9%97%AD%E5%8C%85%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>今天在力扣刷题，遇到一个题目要求实现一个只允许一次函数的调用，如下是方法和测试用例：</p>
@@ -28,40 +49,6 @@
       </tags>
   </entry>
   <entry>
-    <title>特别喜欢的一首歌</title>
-    <url>/2023/07/07/%E7%89%B9%E5%88%AB%E5%96%9C%E6%AC%A2%E7%9A%84%E4%B8%80%E9%A6%96%E6%AD%8C/</url>
-    <content><![CDATA[<p>去年听到的一首宝藏歌曲 sheluvme - Tai verdes 一首十分阳光甜蜜的歌</p>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>My favorite song</tag>
-        <tag>Tai verdes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VSCode实用插件</title>
-    <url>/2023/07/08/VSCode%E5%AE%9E%E7%94%A8%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="Turbo-Console-Log"><a href="#Turbo-Console-Log" class="headerlink" title="Turbo Console Log"></a>Turbo Console Log</h2><p>前端开发必备的打印神器，众所周知前端开发的时候会大量使用 “console.log()” 方法，每次都手敲会十分不便。而这个插件为我们解决了这个难题。<br><img src="https://my-pic-base.oss-cn-beijing.aliyuncs.com/blog/vscodeplugin/howtouseconsolelog.png" alt="Alt text"><br>选中你要打印的变量（上图使用num这个变量）</p>
-<ul>
-<li>快捷打印变量：control + option + L</li>
-<li>注释所有的打印：option + shift + C</li>
-<li>取消注释所有的打印：option + shift + U</li>
-<li>删除所有的打印语句：option + shift + D</li>
-</ul>
-<p>因为我用的是Mac所以以上快捷键都是Mac系统的</p>
-<h2 id="carbon-now-sh"><a href="#carbon-now-sh" class="headerlink" title="carbon-now-sh"></a>carbon-now-sh</h2><p>这是一个提升逼格的插件，我们在开发的时候难免会遇到一些代码上的问题需要请教领导或同事，如果我们直接复制一大段代码给他们，难免有点不雅，并且有些代码会乱码，所以我们需要这个插件，将代码生成一张图片，使用方法也很简单。</p>
-<ol>
-<li>选中你要生成图片的代码</li>
-<li>打开命令行托盘：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Window - Ctrl + Shift + P</span><br><span class="line">- Mac - Cmd + Shift + P</span><br></pre></td></tr></table></figure></li>
-<li>输入 “Carbon”，点击它<br>完成上述步骤之后，会跳转到一个网页，你可以设置图片的颜色以及代码的格式，如下图所示:<br><img src="https://my-pic-base.oss-cn-beijing.aliyuncs.com/blog/vscodeplugin/Snipaste_2023-07-08_10-06-41.png" alt="Alt text"><br>进行一些简单的设置你想要的风格和样式，就可以下载和复制图片啦</li>
-</ol>
-<h2 id="Vetur"><a href="#Vetur" class="headerlink" title="Vetur"></a>Vetur</h2><p>Vetur 是为 Vue 开发量身打造的插件，当你新建一个空的 Vue 文件，在文件内输入 vue 关键字，能联想一些 vue 文件的快速模板，帮助你快速生成 vue 模板页面，大大提高了开发效率。</p>
-<h2 id="open-in-browser"><a href="#open-in-browser" class="headerlink" title="open-in-browser"></a>open-in-browser</h2><p>写好页面，打开浏览器是很正常的一步操作，但是就是这么正常的操作，有时候会变得很麻烦。VS Code 没有自带打开默认浏览器的功能，所以我们需要这个插件去弥补这个遗憾。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>NBA2K24封面人物</title>
     <url>/2023/07/07/NBA2K24%E5%B0%81%E9%9D%A2%E4%BA%BA%E7%89%A9/</url>
     <content><![CDATA[<p>科比布莱恩特再次成为NBA2K封面人物</p>
@@ -72,6 +59,19 @@
       <tags>
         <tag>NBA2K</tag>
         <tag>Game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>特别喜欢的一首歌</title>
+    <url>/2023/07/07/%E7%89%B9%E5%88%AB%E5%96%9C%E6%AC%A2%E7%9A%84%E4%B8%80%E9%A6%96%E6%AD%8C/</url>
+    <content><![CDATA[<p>去年听到的一首宝藏歌曲 sheluvme - Tai verdes 一首十分阳光甜蜜的歌</p>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>My favorite song</tag>
+        <tag>Tai verdes</tag>
       </tags>
   </entry>
   <entry>
