@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Welcome to my blog</title>
+    <url>/2023/07/04/Welcome/</url>
+    <content><![CDATA[<p>你好啊，我的博客正式上线啦，有空多来逛逛喔</p>
+]]></content>
+      <tags>
+        <tag>Welcome</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VSCode实用插件</title>
+    <url>/2023/07/08/VSCode%E5%AE%9E%E7%94%A8%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="Turbo-Console-Log"><a href="#Turbo-Console-Log" class="headerlink" title="Turbo Console Log"></a>Turbo Console Log</h2><p>前端开发必备的打印神器，众所周知前端开发的时候会大量使用 “console.log()” 方法，每次都手敲会十分不便。而这个插件为我们解决了这个难题。<br><img src="https://my-pic-base.oss-cn-beijing.aliyuncs.com/blog/vscodeplugin/howtouseconsolelog.png" alt="Alt text"><br>选中你要打印的变量（上图使用num这个变量）</p>
+<ul>
+<li>快捷打印变量：control + option + L</li>
+<li>注释所有的打印：option + shift + C</li>
+<li>取消注释所有的打印：option + shift + U</li>
+<li>删除所有的打印语句：option + shift + D</li>
+</ul>
+<p>因为我用的是Mac所以以上快捷键都是Mac系统的</p>
+<h2 id="carbon-now-sh"><a href="#carbon-now-sh" class="headerlink" title="carbon-now-sh"></a>carbon-now-sh</h2><p>这是一个提升逼格的插件，我们在开发的时候难免会遇到一些代码上的问题需要请教领导或同事，如果我们直接复制一大段代码给他们，难免有点不雅，并且有些代码会乱码，所以我们需要这个插件，将代码生成一张图片，使用方法也很简单。</p>
+<ol>
+<li>选中你要生成图片的代码</li>
+<li>打开命令行托盘：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Window - Ctrl + Shift + P</span><br><span class="line">- Mac - Cmd + Shift + P</span><br></pre></td></tr></table></figure></li>
+<li>输入 “Carbon”，点击它<br>完成上述步骤之后，会跳转到一个网页，你可以设置图片的颜色以及代码的格式，如下图所示:<br><img src="https://my-pic-base.oss-cn-beijing.aliyuncs.com/blog/vscodeplugin/Snipaste_2023-07-08_10-06-41.png" alt="Alt text"><br>进行一些简单的设置你想要的风格和样式，就可以下载和复制图片啦</li>
+</ol>
+<h2 id="Vetur"><a href="#Vetur" class="headerlink" title="Vetur"></a>Vetur</h2><p>Vetur 是为 Vue 开发量身打造的插件，当你新建一个空的 Vue 文件，在文件内输入 vue 关键字，能联想一些 vue 文件的快速模板，帮助你快速生成 vue 模板页面，大大提高了开发效率。</p>
+<h2 id="open-in-browser"><a href="#open-in-browser" class="headerlink" title="open-in-browser"></a>open-in-browser</h2><p>写好页面，打开浏览器是很正常的一步操作，但是就是这么正常的操作，有时候会变得很麻烦。VS Code 没有自带打开默认浏览器的功能，所以我们需要这个插件去弥补这个遗憾。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>NBA2K24封面人物</title>
+    <url>/2023/07/07/NBA2K24%E5%B0%81%E9%9D%A2%E4%BA%BA%E7%89%A9/</url>
+    <content><![CDATA[<p>科比布莱恩特再次成为NBA2K封面人物</p>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>NBA2K</tag>
+        <tag>Game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript闭包函数</title>
+    <url>/2023/07/07/JavaScript%E9%97%AD%E5%8C%85%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>今天在力扣刷题，遇到一个题目要求实现一个只允许一次函数的调用，如下是方法和测试用例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @param &#123;Function&#125; fn</span><br><span class="line"> * @return &#123;Function&#125;</span><br><span class="line"> */</span><br><span class="line">var once = function(fn) &#123;</span><br><span class="line">  return function(...args)&#123;</span><br><span class="line">      // 在此输入闭包函数的代码</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 测试用例</span><br><span class="line">let fn = (a,b,c) =&gt; (a + b + c)</span><br><span class="line">let onceFn = once(fn)</span><br><span class="line">onceFn(1,2,3) // 6</span><br><span class="line">onceFn(2,3,6) // undefined</span><br></pre></td></tr></table></figure>
+<p>这题很简单，一开始我定义了一个全局变量<code>callCount</code>用来记录方法调用的次数，然后再方法内自增调用次数，如果大于一次调用就返回undefined。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let callCount = 0;</span><br><span class="line">var once = function(fn) &#123;</span><br><span class="line">  return function(...args)&#123;</span><br><span class="line">    if (callCount &gt; 0) &#123;</span><br><span class="line">      return undefined;</span><br><span class="line">    &#125;</span><br><span class="line">    callCount++;</span><br><span class="line">    return fn(...args);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>测试没问题提交也可以通过，于是我去看了看别人是怎么做的，我发现别人把变量的定义放在了方法内部，居然也可以实现效果而不是我预想的每次调用方法，变量<code>callCount</code>会清零</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var once = function(fn) &#123;</span><br><span class="line">  // callCount在方法内部定义</span><br><span class="line">  let callCount = 0;</span><br><span class="line">  return function(...args)&#123;</span><br><span class="line">    if (callCount &gt; 0) &#123;</span><br><span class="line">      return undefined;</span><br><span class="line">    &#125;</span><br><span class="line">    callCount++;</span><br><span class="line">    return fn(...args);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="闭包函数特性"><a href="#闭包函数特性" class="headerlink" title="闭包函数特性"></a>闭包函数特性</h2><p>经过查阅资料和写demo发现：在JavaScript中当一个函数内部定义了一个函数，且这个内部函数引用了外部函数的变量，此时JavaScript解释器不会回收那个变量的内存就好像类的静态私有成员，实现程序的记忆化。</p>
+<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><p>使用JavaScript闭包很容易在不知不觉中造成内存泄漏,请看下面的例子:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let outer = function() &#123; </span><br><span class="line">   let name = &#x27;Jake&#x27;; </span><br><span class="line"> return function() &#123; </span><br><span class="line">   return name; </span><br><span class="line"> &#125;; </span><br><span class="line">&#125;; </span><br></pre></td></tr></table></figure>
+<p>调用 outer()会导致分配给 name 的内存被泄漏。以上代码执行后创建了一个内部闭包，只要返回 的函数存在就不能清理 name，因为闭包一直在引用着它。假如 name 的内容很大（不止是一个小字符 串），那可能就是个大问题了。 —出自JavaScript高级程序设计</p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>特别喜欢的一首歌</title>
+    <url>/2023/07/07/%E7%89%B9%E5%88%AB%E5%96%9C%E6%AC%A2%E7%9A%84%E4%B8%80%E9%A6%96%E6%AD%8C/</url>
+    <content><![CDATA[<p>去年听到的一首宝藏歌曲 sheluvme - Tai verdes 一首十分阳光甜蜜的歌</p>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>My favorite song</tag>
+        <tag>Tai verdes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于我</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<blockquote>
+<p>“离开世界之前 一切都是过程”</p>
+</blockquote>
+<p>Hey，我是Gezhiheng(a.k.a. Henry @HenryHimself)，一个普通<del>且自信</del>的开发者，曾经幻想过成为职业球员的篮球爱好者(打球的男孩子应该都做过这个梦)，自诩是一个拥有“第一步大师”徽章的控球后卫。平时就喜欢一个人呆着做点喜欢的事儿(也许和我是INTP-A有关)</p>
+<p>还是一个除了PlayStation以外的全平台玩家，单纯对PlayStation独占不感兴趣，特别喜欢任天堂和R星这两个游戏公司，BTW: 任天堂什么时候出新机器啊，我真受不了Switch的(≈30)帧马赛克画面了(指的是塞尔达的游戏画面)</p>
+<p>平时没事也会看书，目前最喜欢的书是《明朝那些事儿》，要说有什么讨厌的书，那应该是《顿感力》，顿感力这个词是好的，但书中有三观不正的内容(我认为的)，让我十分反感</p>
+<p>目前物理活动范围主要在江苏常州，对没错就是居民上班上学都要骑恐龙的城市(doge，虚拟身份经常出没于B站、稀土掘金、虎扑、GitHub、小黑盒、推特、<del>小而美</del>微信 等</p>
+]]></content>
+  </entry>
+</search>

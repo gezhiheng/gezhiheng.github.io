@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>关于我 | 葛智恒的博客</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/frame.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            GEZHIHENG BLOG
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        <script>
+          function toggleMenu() {
+              var menuList = document.getElementsByClassName("menu-list")[0];
+              var menuButton = document.getElementById("menu-btn");  
+              if(menuList.classList.contains("active")){
+                menuList.classList.remove("active");
+                menuButton.innerHTML = "MENU";
+              }else{
+                menuList.classList.add("active");
+                menuButton.innerHTML = "<div class=\"icon arrow-up\"> </div>";
+              }
+          }
+        </script>
+        MENU
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item menu-item-active">
+                <a href="/about/">About</a>
+              </li> 
+                   
+          
+          
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="post-title">
+            
+            
+                关于我
+            
+            
+        </div>
+    </div>
+    <div class="h-line-primary"></div>
+</div>
+    <div class="post-content">
+    <blockquote>
+<p>“离开世界之前 一切都是过程”</p>
+</blockquote>
+<p>Hey，我是Gezhiheng(a.k.a. Henry @HenryHimself)，一个普通<del>且自信</del>的开发者，曾经幻想过成为职业球员的篮球爱好者(打球的男孩子应该都做过这个梦)，自诩是一个拥有“第一步大师”徽章的控球后卫。平时就喜欢一个人呆着做点喜欢的事儿(也许和我是INTP-A有关)</p>
+<p>还是一个除了PlayStation以外的全平台玩家，单纯对PlayStation独占不感兴趣，特别喜欢任天堂和R星这两个游戏公司，BTW: 任天堂什么时候出新机器啊，我真受不了Switch的(≈30)帧马赛克画面了(指的是塞尔达的游戏画面)</p>
+<p>平时没事也会看书，目前最喜欢的书是《明朝那些事儿》，要说有什么讨厌的书，那应该是《顿感力》，顿感力这个词是好的，但书中有三观不正的内容(我认为的)，让我十分反感</p>
+<p>目前物理活动范围主要在江苏常州，对没错就是居民上班上学都要骑恐龙的城市(doge，虚拟身份经常出没于B站、稀土掘金、虎扑、GitHub、小黑盒、推特、<del>小而美</del>微信 等</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+                © Gezhiheng | 
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+    
+    
+
+  </body>
+</html>

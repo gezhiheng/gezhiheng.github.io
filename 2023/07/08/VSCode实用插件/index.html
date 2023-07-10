@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>VSCode实用插件 | 葛智恒的博客</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/frame.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            GEZHIHENG BLOG
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        <script>
+          function toggleMenu() {
+              var menuList = document.getElementsByClassName("menu-list")[0];
+              var menuButton = document.getElementById("menu-btn");  
+              if(menuList.classList.contains("active")){
+                menuList.classList.remove("active");
+                menuButton.innerHTML = "MENU";
+              }else{
+                menuList.classList.add("active");
+                menuButton.innerHTML = "<div class=\"icon arrow-up\"> </div>";
+              }
+          }
+        </script>
+        MENU
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/about/">About</a>
+              </li> 
+                   
+          
+          
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+        </div>
+        <div class="post-title">
+            
+            
+                VSCode实用插件
+            
+            
+        </div>
+        <span class="post-date">
+            Jul 8, 2023
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h2 id="Turbo-Console-Log"><a href="#Turbo-Console-Log" class="headerlink" title="Turbo Console Log"></a>Turbo Console Log</h2><p>前端开发必备的打印神器，众所周知前端开发的时候会大量使用 “console.log()” 方法，每次都手敲会十分不便。而这个插件为我们解决了这个难题。<br><img src="https://my-pic-base.oss-cn-beijing.aliyuncs.com/blog/vscodeplugin/howtouseconsolelog.png" alt="Alt text"><br>选中你要打印的变量（上图使用num这个变量）</p>
+<ul>
+<li>快捷打印变量：control + option + L</li>
+<li>注释所有的打印：option + shift + C</li>
+<li>取消注释所有的打印：option + shift + U</li>
+<li>删除所有的打印语句：option + shift + D</li>
+</ul>
+<p>因为我用的是Mac所以以上快捷键都是Mac系统的</p>
+<h2 id="carbon-now-sh"><a href="#carbon-now-sh" class="headerlink" title="carbon-now-sh"></a>carbon-now-sh</h2><p>这是一个提升逼格的插件，我们在开发的时候难免会遇到一些代码上的问题需要请教领导或同事，如果我们直接复制一大段代码给他们，难免有点不雅，并且有些代码会乱码，所以我们需要这个插件，将代码生成一张图片，使用方法也很简单。</p>
+<ol>
+<li>选中你要生成图片的代码</li>
+<li>打开命令行托盘：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- Window - Ctrl + Shift + P</span><br><span class="line">- Mac - Cmd + Shift + P</span><br></pre></td></tr></table></figure></li>
+<li>输入 “Carbon”，点击它<br>完成上述步骤之后，会跳转到一个网页，你可以设置图片的颜色以及代码的格式，如下图所示:<br><img src="https://my-pic-base.oss-cn-beijing.aliyuncs.com/blog/vscodeplugin/Snipaste_2023-07-08_10-06-41.png" alt="Alt text"><br>进行一些简单的设置你想要的风格和样式，就可以下载和复制图片啦</li>
+</ol>
+<h2 id="Vetur"><a href="#Vetur" class="headerlink" title="Vetur"></a>Vetur</h2><p>Vetur 是为 Vue 开发量身打造的插件，当你新建一个空的 Vue 文件，在文件内输入 vue 关键字，能联想一些 vue 文件的快速模板，帮助你快速生成 vue 模板页面，大大提高了开发效率。</p>
+<h2 id="open-in-browser"><a href="#open-in-browser" class="headerlink" title="open-in-browser"></a>open-in-browser</h2><p>写好页面，打开浏览器是很正常的一步操作，但是就是这么正常的操作，有时候会变得很麻烦。VS Code 没有自带打开默认浏览器的功能，所以我们需要这个插件去弥补这个遗憾。</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2023/07/07/%E7%89%B9%E5%88%AB%E5%96%9C%E6%AC%A2%E7%9A%84%E4%B8%80%E9%A6%96%E6%AD%8C/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+                © Gezhiheng | 
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+    
+    
+
+  </body>
+</html>
