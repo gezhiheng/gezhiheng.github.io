@@ -166,7 +166,7 @@
     <div class="post-content">
     <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>开启VPN之后提交与拉取代码可能会出现如下错误</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OpenSSL SSL_read: Connection was reset, errno 10054</span><br></pre></td></tr></table></figure>
-<p>翻译成中文 打开SSL SSL_read：连接已重置，错误 10054。<br>这样解释可能也比较模糊，通俗点说服务器的SSL证书灭有经过第三方机构的签署。但也有人说可能是网络不稳定，连接超时导致。</p>
+<p>翻译成中文 打开SSL SSL_read：连接已重置，错误 10054。<br>这样解释可能也比较模糊，通俗点说服务器的SSL证书没有经过第三方机构的签署。但也有人说可能是网络不稳定，连接超时导致。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>更改git配置</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
 <p>如果上述指令无法解决你的问题，可以执行如下指令：</p>
