@@ -14,7 +14,7 @@
 
 
 
-<title>Tag: JavaScript | 葛智恒的博客</title>
+<title>JavaScript函数防抖 | 葛智恒的博客</title>
 
 
 
@@ -118,63 +118,78 @@
 
       <div class="main">
         <div class="flex-container">
-          <div id="tag">
+          <article id="post">
+
   
-
-    <p class="tag-title">
-      / <a href="/tag/">tags</a>
-      / <a href="">JavaScript</a> /
-    </p>
-    <div class="post-list">
-    
-    
-
-        
-
-        
-            <div class="year-title">2023</div>
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2023/07/20/JavaScript%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96/">
-                
-                    JavaScript函数防抖
-                
-                </a> 
-            </div>
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
             
-            <span class="post-date">Jul 20, 2023</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2023/07/07/JavaScript%E9%97%AD%E5%8C%85%E5%87%BD%E6%95%B0/">
                 
-                    JavaScript闭包函数
-                
-                </a> 
-            </div>
+                    <span class="post-tag">
+                        <a href="/tags/JavaScript/">
+                            JavaScript
+                        </a>
+                    </span>    
+                           
             
-            <span class="post-date">Jul 7, 2023</span>
         </div>
-
-    
-    <div id="paginator">
+        <div class="post-title">
+            
+            
+                JavaScript函数防抖
+            
+            
+        </div>
+        <span class="post-date">
+            Jul 20, 2023
+        </span>
+    </div>
+    <div class="post-img">
         
+            <div class="h-line-primary"></div>
+              
     </div>
 </div>
+    <div class="post-content">
+    <p>函数防抖是指 一个函数只能在t时间后才能被调用，如果该函数在t时间内被调用就会取消这次函数的调用，打断施法(doge，下面是一个精简实现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 函数防抖</span><br><span class="line"> * @param &#123;Function&#125; fn</span><br><span class="line"> * @param &#123;number&#125; t milliseconds</span><br><span class="line"> * @return &#123;Function&#125;</span><br><span class="line"> */</span><br><span class="line">var debounce = function(fn, t) &#123;</span><br><span class="line">  let timer</span><br><span class="line">  return function(...args) &#123;</span><br><span class="line">    if (timer) &#123;</span><br><span class="line">      clearTimeout(timer)</span><br><span class="line">    &#125;</span><br><span class="line">    timer = setTimeout(() =&gt; &#123;</span><br><span class="line">      fn(...args)</span><br><span class="line">    &#125;, t)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
+</div> 
 
-  
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2023/07/19/%E8%A7%A3%E6%B1%BASpringBoot%E6%95%B4%E5%90%88Swagger%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
 
 </div>
+     
+  
+</article>
         </div>
       </div>
       
