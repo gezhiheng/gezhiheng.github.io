@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JavaScript函数防抖</title>
+    <url>/2023/07/20/JavaScript%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96/</url>
+    <content><![CDATA[<p>函数防抖是指 一个函数只能在t时间后才能被调用，如果该函数在t时间内被调用就会取消这次函数的调用，打断施法(doge，下面是一个精简实现</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 函数防抖</span><br><span class="line"> * @param &#123;Function&#125; fn</span><br><span class="line"> * @param &#123;number&#125; t milliseconds</span><br><span class="line"> * @return &#123;Function&#125;</span><br><span class="line"> */</span><br><span class="line">var debounce = function(fn, t) &#123;</span><br><span class="line">  let timer</span><br><span class="line">  return function(...args) &#123;</span><br><span class="line">    if (timer) &#123;</span><br><span class="line">      clearTimeout(timer)</span><br><span class="line">    &#125;</span><br><span class="line">    timer = setTimeout(() =&gt; &#123;</span><br><span class="line">      fn(...args)</span><br><span class="line">    &#125;, t)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript闭包函数</title>
     <url>/2023/07/07/JavaScript%E9%97%AD%E5%8C%85%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>今天在力扣刷题，遇到一个题目要求实现一个只允许一次函数的调用，如下是方法和测试用例：</p>
@@ -13,16 +23,6 @@
 <h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><p>使用JavaScript闭包很容易在不知不觉中造成内存泄漏,请看下面的例子:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let outer = function() &#123; </span><br><span class="line">   let name = &#x27;Jake&#x27;; </span><br><span class="line"> return function() &#123; </span><br><span class="line">   return name; </span><br><span class="line"> &#125;; </span><br><span class="line">&#125;; </span><br></pre></td></tr></table></figure>
 <p>调用 outer()会导致分配给 name 的内存被泄漏。以上代码执行后创建了一个内部闭包，只要返回 的函数存在就不能清理 name，因为闭包一直在引用着它。假如 name 的内容很大（不止是一个小字符 串），那可能就是个大问题了。 —出自JavaScript高级程序设计</p>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript函数防抖</title>
-    <url>/2023/07/20/JavaScript%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96/</url>
-    <content><![CDATA[<p>函数防抖是指 一个函数只能在t时间后才能被调用，如果该函数在t时间内被调用就会取消这次函数的调用，打断施法(doge，下面是一个精简实现</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 函数防抖</span><br><span class="line"> * @param &#123;Function&#125; fn</span><br><span class="line"> * @param &#123;number&#125; t milliseconds</span><br><span class="line"> * @return &#123;Function&#125;</span><br><span class="line"> */</span><br><span class="line">var debounce = function(fn, t) &#123;</span><br><span class="line">  let timer</span><br><span class="line">  return function(...args) &#123;</span><br><span class="line">    if (timer) &#123;</span><br><span class="line">      clearTimeout(timer)</span><br><span class="line">    &#125;</span><br><span class="line">    timer = setTimeout(() =&gt; &#123;</span><br><span class="line">      fn(...args)</span><br><span class="line">    &#125;, t)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>JavaScript</tag>
@@ -84,6 +84,40 @@
         <tag>Tip</tag>
         <tag>Git</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>异或运算</title>
+    <url>/2023/08/11/%E5%BC%82%E6%88%96%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<p>在我的日常开发中没用到过异或，起初只是知道大概是什么，不过今天刷LeetCode时遇到了需要使用异或的题目</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>异或也称为异或运算是一种逻辑运算符，常用 <code>^</code> 或 <code>⊕</code> 表示，它的运算规则如下：</p>
+<ul>
+<li>任何一个数字与0进行异或运算结果都是它本身 <ul>
+<li><code>a ^ 0 = a</code></li>
+</ul>
+</li>
+<li>任何一个数与它本身进行异或结果都是0 <ul>
+<li><code>a ^ a = 0</code></li>
+</ul>
+</li>
+<li>满足交换律和结合律<ul>
+<li><code>a ^ b = b ^ a</code> </li>
+<li><code>(a ^ b) ^ c = a ^ (b ^ c)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="运算过程"><a href="#运算过程" class="headerlink" title="运算过程"></a>运算过程</h2><p>33与34进行异或结果为3，其中过程如图所示<br><img src="https://my-pic-base.oss-cn-beijing.aliyuncs.com/undefined%E5%BC%82%E6%88%96%E8%BF%90%E7%AE%97.jpg" alt="异或运算"></p>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p>只出现一次的数字</p>
+<p>给你一个 非空 整数数组 nums ，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。你必须设计并实现线性时间复杂度的算法来解决此问题，且该算法只使用常量额外空间。</p>
+<blockquote>
+<p>输入：nums &#x3D; [2,2,1]</p>
+<p>输出：1</p>
+</blockquote>
+<blockquote>
+<p>输入：nums &#x3D; [4,1,2,1,2]</p>
+<p>输出：4</p>
+</blockquote>
+<p>刚开始解题使用两个for循环嵌套，时间复杂度太高了，可以通过异或运算优化</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 使用异或运算</span><br><span class="line">var singleNumber = (nums) =&gt; &#123;</span><br><span class="line">  let single = 0</span><br><span class="line">  for (const num of nums) &#123;</span><br><span class="line">    single ^= num</span><br><span class="line">  &#125;</span><br><span class="line">  return single</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>解决SpringBoot整合Swagger启动报错</title>

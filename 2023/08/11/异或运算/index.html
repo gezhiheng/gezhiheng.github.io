@@ -14,7 +14,7 @@
 
 
 
-<title>JavaScript函数防抖 | 葛智恒的博客</title>
+<title>异或运算 | 葛智恒的博客</title>
 
 
 
@@ -125,24 +125,16 @@
     <div class="post-info">
         <div class="tag-list">
             
-                
-                    <span class="post-tag">
-                        <a href="/tags/JavaScript/">
-                            JavaScript
-                        </a>
-                    </span>    
-                           
-            
         </div>
         <div class="post-title">
             
             
-                JavaScript函数防抖
+                异或运算
             
             
         </div>
         <span class="post-date">
-            Jul 20, 2023
+            Aug 11, 2023
         </span>
     </div>
     <div class="post-img">
@@ -152,9 +144,36 @@
     </div>
 </div>
     <div class="post-content">
-    <p>函数防抖是指 一个函数只能在t时间后才能被调用，如果该函数在t时间内被调用就会取消这次函数的调用，打断施法(doge，下面是一个精简实现</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 函数防抖</span><br><span class="line"> * @param &#123;Function&#125; fn</span><br><span class="line"> * @param &#123;number&#125; t milliseconds</span><br><span class="line"> * @return &#123;Function&#125;</span><br><span class="line"> */</span><br><span class="line">var debounce = function(fn, t) &#123;</span><br><span class="line">  let timer</span><br><span class="line">  return function(...args) &#123;</span><br><span class="line">    if (timer) &#123;</span><br><span class="line">      clearTimeout(timer)</span><br><span class="line">    &#125;</span><br><span class="line">    timer = setTimeout(() =&gt; &#123;</span><br><span class="line">      fn(...args)</span><br><span class="line">    &#125;, t)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
+    <p>在我的日常开发中没用到过异或，起初只是知道大概是什么，不过今天刷LeetCode时遇到了需要使用异或的题目</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>异或也称为异或运算是一种逻辑运算符，常用 <code>^</code> 或 <code>⊕</code> 表示，它的运算规则如下：</p>
+<ul>
+<li>任何一个数字与0进行异或运算结果都是它本身 <ul>
+<li><code>a ^ 0 = a</code></li>
+</ul>
+</li>
+<li>任何一个数与它本身进行异或结果都是0 <ul>
+<li><code>a ^ a = 0</code></li>
+</ul>
+</li>
+<li>满足交换律和结合律<ul>
+<li><code>a ^ b = b ^ a</code> </li>
+<li><code>(a ^ b) ^ c = a ^ (b ^ c)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="运算过程"><a href="#运算过程" class="headerlink" title="运算过程"></a>运算过程</h2><p>33与34进行异或结果为3，其中过程如图所示<br><img src="https://my-pic-base.oss-cn-beijing.aliyuncs.com/undefined%E5%BC%82%E6%88%96%E8%BF%90%E7%AE%97.jpg" alt="异或运算"></p>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p>只出现一次的数字</p>
+<p>给你一个 非空 整数数组 nums ，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。你必须设计并实现线性时间复杂度的算法来解决此问题，且该算法只使用常量额外空间。</p>
+<blockquote>
+<p>输入：nums &#x3D; [2,2,1]</p>
+<p>输出：1</p>
+</blockquote>
+<blockquote>
+<p>输入：nums &#x3D; [4,1,2,1,2]</p>
+<p>输出：4</p>
+</blockquote>
+<p>刚开始解题使用两个for循环嵌套，时间复杂度太高了，可以通过异或运算优化</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 使用异或运算</span><br><span class="line">var singleNumber = (nums) =&gt; &#123;</span><br><span class="line">  let single = 0</span><br><span class="line">  for (const num of nums) &#123;</span><br><span class="line">    single ^= num</span><br><span class="line">  &#125;</span><br><span class="line">  return single</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </div> 
 
 <script>
@@ -165,17 +184,12 @@
     <nav class="post-nav">
         <div class="prev-item">
            
-                <div class="icon arrow-left"></div>
-                <div class="post-link">
-                    <a href="/2023/08/11/%E5%BC%82%E6%88%96%E8%BF%90%E7%AE%97/">Prev</a>
-                </div>
-            
         </div>
         <div class="next-item">
             
                 <div class="icon arrow-right"></div>
                 <div class="post-link">
-                  <a href="/2023/07/19/%E8%A7%A3%E6%B1%BASpringBoot%E6%95%B4%E5%90%88Swagger%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/">Next</a>  
+                  <a href="/2023/07/20/JavaScript%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96/">Next</a>  
                 </div>  
             
         </div>
